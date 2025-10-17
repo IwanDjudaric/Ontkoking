@@ -57,6 +57,9 @@ body {
 }
 
 .login-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     margin: 20px 30px;
     padding: 15px;
     background-color: #4a5568;
