@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreren | KookGenZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="signup-container">
+        <!-- Floating Background Elements -->
+        <div class="floating-elements">
+            <div class="floating-element el-1"></div>
+            <div class="floating-element el-2"></div>
+            <div class="floating-element el-3"></div>
+            <div class="floating-element el-4"></div>
+        </div>
+
+        <div class="signup-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h1>KookGenZ</h1>
+            </div>
+            <p class="tagline">Word lid en stop de ontkoking!</p>
+        </div>
+
+        <div class="signup-form-container">
+            <div class="signup-card">
+                <!-- Progress Steps -->
+                <div class="progress-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span class="step-label">Basis</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span class="step-label">Profiel</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span class="step-label">Voorkeuren</span>
+                    </div>
+                </div>
+
+                <!-- Animated Card Header -->
+                <div class="card-header">
+                    <h2>Word lid van KookGenZ</h2>
+                    <p class="signup-subtitle">Maak je account aan en begin met koken</p>
+                </div>
+                
+                <!-- Step 1: Basic Information -->
+                <form class="signup-form" id="signupForm">
+                    <div class="form-step active" data-step="1">
+                        <div class="input-row">
+                            <div class="floating-input-group">
+                                <input type="text" id="firstName" class="floating-input" placeholder=" " required>
+                                <label for="firstName" class="floating-label">
+                                    <i class="fas fa-user icon-left"></i>
+                                    Voornaam
+                                </label>
+                            </div>
+                            
+                            <div class="floating-input-group">
+                                <input type="text" id="lastName" class="floating-input" placeholder=" " required>
+                                <label for="lastName" class="floating-label">
+                                    <i class="fas fa-user icon-left"></i>
+                                    Achternaam
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-input-group">
+                            <input type="email" id="signupEmail" class="floating-input" placeholder=" " required>
+                            <label for="signupEmail" class="floating-label">
+                                <i class="fas fa-envelope icon-left"></i>
+                                E-mailadres
+                            </label>
+                        </div>
+                        
+                        <div class="floating-input-group">
+                            <input type="password" id="signupPassword" class="floating-input" placeholder=" " required>
+                            <label for="signupPassword" class="floating-label">
+                                <i class="fas fa-lock icon-left"></i>
+                                Wachtwoord
+                            </label>
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <div class="password-strength">
+                                <div class="strength-bar"></div>
+                                <div class="strength-text">Wachtwoordsterkte</div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-input-group">
+                            <input type="password" id="confirmPassword" class="floating-input" placeholder=" " required>
+                            <label for="confirmPassword" class="floating-label">
+                                <i class="fas fa-lock icon-left"></i>
+                                Bevestig wachtwoord
+                            </label>
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="next-step-btn" data-next="2">
+                                Volgende
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Profile Information -->
+                    <div class="form-step" data-step="2">
+                        <div class="floating-input-group">
+                            <input type="date" id="birthDate" class="floating-input" placeholder=" " required>
+                            <label for="birthDate" class="floating-label">
+                                <i class="fas fa-calendar icon-left"></i>
+                                Geboortedatum
+                            </label>
+                        </div>
+                        
+                        <div class="floating-input-group">
+                            <select id="cookingLevel" class="floating-input" required>
+                                <option value=""></option>
+                                <option value="beginner">Beginner - Kan brood smeren</option>
+                                <option value="intermediate">Gevorderd - Basis recepten</option>
+                                <option value="advanced">Expert - Complexe gerechten</option>
+                                <option value="chef">Masterchef - Alles mogelijk!</option>
+                            </select>
+                            <label for="cookingLevel" class="floating-label">
+                                <i class="fas fa-chef-hat icon-left"></i>
+                                Kookniveau
+                            </label>
+                        </div>
+
+                        <div class="floating-input-group">
+                            <input type="text" id="username" class="floating-input" placeholder=" " required>
+                            <label for="username" class="floating-label">
+                                <i class="fas fa-at icon-left"></i>
+                                Gebruikersnaam
+                            </label>
+                            <div class="username-availability"></div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step-btn" data-prev="1">
+                                <i class="fas fa-arrow-left"></i>
+                                Vorige
+                            </button>
+                            <button type="button" class="next-step-btn" data-next="3">
+                                Volgende
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Preferences -->
+                    <div class="form-step" data-step="3">
+                        <div class="preferences-section">
+                            <h3>Kookvoorkeuren</h3>
+                            <p class="preferences-subtitle">Selecteer wat bij je past (meerdere opties mogelijk)</p>
+                            
+                            <div class="preferences-grid">
+                                <label class="preference-option">
+                                    <input type="checkbox" name="preferences" value="vegetarian">
+                                    <div class="preference-card">
+                                        <i class="fas fa-leaf"></i>
+                                        <span>Vegetarisch</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="preference-option">
+                                    <input type="checkbox" name="preferences" value="vegan">
+                                    <div class="preference-card">
+                                        <i class="fas fa-seedling"></i>
+                                        <span>Veganistisch</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="preference-option">
+                                    <input type="checkbox" name="preferences" value="quick">
+                                    <div class="preference-card">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Snelle recepten</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="preference-option">
+                                    <input type="checkbox" name="preferences" value="healthy">
+                                    <div class="preference-card">
+                                        <i class="fas fa-apple-alt"></i>
+                                        <span>Gezond eten</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="preference-option">
+                                    <input type="checkbox" name="preferences" value="budget">
+                                    <div class="preference-card">
+                                        <i class="fas fa-euro-sign"></i>
+                                        <span>Budgetvriendelijk</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="preference-option">
+                                    <input type="checkbox" name="preferences" value="international">
+                                    <div class="preference-card">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Internationale keuken</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="terms-section">
+                            <label class="modern-checkbox large">
+                                <input type="checkbox" id="acceptTerms" required>
+                                <span class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                Ik ga akkoord met de <a href="#" class="terms-link">gebruiksvoorwaarden</a> en <a href="#" class="terms-link">privacybeleid</a>
+                            </label>
+
+                            <label class="modern-checkbox large">
+                                <input type="checkbox" id="newsletter">
+                                <span class="checkmark">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                Ik wil graag updates en kooktips ontvangen
+                            </label>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step-btn" data-prev="2">
+                                <i class="fas fa-arrow-left"></i>
+                                Vorige
+                            </button>
+                            <button type="submit" class="signup-submit-btn">
+                                <span class="btn-text">Account aanmaken</span>
+                                <div class="btn-loader">
+                                    <div class="loader-dot"></div>
+                                    <div class="loader-dot"></div>
+                                    <div class="loader-dot"></div>
+                                </div>
+                                <i class="fas fa-check btn-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Login Link -->
+                <div class="login-link">
+                    <p>Al een account? <a href="login.html" class="pulse-link">Inloggen</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="signup-footer">
+            <p>&copy; 2023 KookGenZ. Samen stoppen we de ontkoking!</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Voorwaarden</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+
+</html>
