@@ -26,36 +26,6 @@ body {
     padding: 0;
 }
 
-.nav-item {
-    display: flex;
-    align-items: center;
-    padding: 20px 30px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    font-size: 18px;
-    color: #333;
-}
-
-.nav-item:hover {
-    background-color: #e8e8e8;
-}
-
-.nav-item.active {
-    background-color: #e0e0e0;
-}
-
-.nav-item i {
-    font-size: 24px;
-    margin-right: 20px;
-    width: 30px;
-    color: #555;
-}
-
-.nav-item span {
-    font-weight: 500;
-}
-
 .login-btn {
     display: block;
     text-align: center;
@@ -77,6 +47,9 @@ body {
 }
 
 .signin-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     margin: 20px 30px;
     padding: 15px;
     background-color: #4a5568;
@@ -112,7 +85,6 @@ body {
     position: relative;
     width:70vh;
     height: 100vh;
-    background-color: #4a5568;
     border-radius: 20px;
     border: 1px solid #ddd;
     overflow: hidden;
@@ -125,7 +97,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f0f0f0;
+    background-color: #4a5568;
 }
 
 .comments-sidebar {
