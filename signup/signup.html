@@ -4,96 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registreren | KookGenZ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
+    <title>Inloggen | Yummo</title>
     <link rel="stylesheet" href="signup.css">
 </head>
 
 <body>
-    <div class="signup-container">
+    <div class="login-container">
 
-        <div class="signup-header">
+        <div class="login-header">
             <div class="logo">
                 <div class="logo-icon">
                     <i class="fas fa-utensils"></i>
                 </div>
-                <h1>KookGenZ</h1>
+                <h1>Savorly</h1>
             </div>
-            <p class="tagline">Word lid en stop de ontkoking!</p>
+            <p class="tagline">Stop de Ontkoking</p>
         </div>
 
-        <div class="signup-form-container">
-            <div class="signup-card">
-
+        <div class="login-form-container">
+            <div class="login-card">
                 <!-- Animated Card Header -->
                 <div class="card-header">
-                    <h2>Word lid van KookGenZ</h2>
-                    <p class="signup-subtitle">Maak je account aan en begin met koken</p>
+                    <h2>Welkom</h2>
+                    <p class="login-subtitle">Meld je nu aan!</p>
                 </div>
-                
-                <!-- Step 1: Basic Information -->
-                <form class="signup-form" id="signupForm">
-                    <div class="form-step active" data-step="1">
-                        <div class="input-row">
-                            <div class="floating-input-group">
-                                <input type="text" id="firstName" class="floating-input" placeholder=" " required>
-                                <label for="firstName" class="floating-label">
-                                    <i class="fas fa-user icon-left"></i>
-                                    Voornaam
-                                </label>
-                            </div>
-                            
-                            <div class="floating-input-group">
-                                <input type="text" id="lastName" class="floating-input" placeholder=" " required>
-                                <label for="lastName" class="floating-label">
-                                    <i class="fas fa-user icon-left"></i>
-                                    Achternaam
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="floating-input-group">
-                            <input type="email" id="signupEmail" class="floating-input" placeholder=" " required>
-                            <label for="signupEmail" class="floating-label">
-                                <i class="fas fa-envelope icon-left"></i>
-                                E-mailadres
-                            </label>
-                        </div>
-                        
-                        <div class="floating-input-group">
-                            <input type="password" id="signupPassword" class="floating-input" placeholder=" " required>
-                            <label for="signupPassword" class="floating-label">
-                                <i class="fas fa-lock icon-left"></i>
-                                Wachtwoord
-                            </label>
-                            <button type="button" class="password-toggle">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <div class="password-strength">
-                                <div class="strength-bar"></div>
-                                <div class="strength-text">Wachtwoordsterkte</div>
-                            </div>
-                        </div>
 
-                        <div class="form-navigation">
-                            <button type="button" class="next-step-btn" data-next="2">
-                                Volgende
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
+                <form class="login-form">
+                    <!-- Floating Label Input -->
+                    <div class="floating-input-group">
+                        <input type="email" id="email" class="floating-input" placeholder=" " required>
+                        <label for="email" class="floating-label">
+                            <i class="fas fa-envelope icon-left"></i>
+                            E-mailadres
+                        </label>
                     </div>
-                </form>
-                
-                <!-- Login Link -->
-                <div class="login-link">
-                    <p>Al een account? <a href="../login/login.html" class="pulse-link">Inloggen</a></p>
-                </div>
+
+                    <!-- Floating Label Input with Password Toggle -->
+                    <div class="floating-input-group">
+                        <input type="password" id="password" class="floating-input" placeholder=" " required>
+                        <label for="password" class="floating-label">
+                            <i class="fas fa-lock icon-left"></i>
+                            Wachtwoord
+                        </label>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <!-- Floating Label Input with Password Toggle -->
+                    <div class="floating-input-group">
+                        <input type="password" id="password" class="floating-input" placeholder=" " required>
+                        <label for="password" class="floating-label">
+                            <i class="fas fa-lock icon-left"></i>
+                            Herhaal wachtwoord
+                        </label>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+
+                    <!-- Animated Submit Button -->
+                    <button type="submit" class="modern-submit-btn">
+                        <span class="btn-text">Inloggen</span>
+                        <div class="btn-loader">
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                            <div class="loader-dot"></div>
+                        </div>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </button>
+
+                    <!-- Signup Link with Pulse Animation -->
+                    <div class="signup-link">
+                        <p>Heb je al een account? <a href="../login/login.html" id="signupLink"
+                                class="pulse-link">Log-In hier</a></p>
+                    </div>
             </div>
         </div>
     </div>
 
-    <script src="signup.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>

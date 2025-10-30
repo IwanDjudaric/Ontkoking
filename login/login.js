@@ -98,19 +98,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Signup link met animatie
     if (signupLink) {
         signupLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    // Pulse animatie
-    this.style.animation = 'pulse 0.6s ease';
-    setTimeout(() => {
-        this.style.animation = '';
-    }, 600);
-    
-    // Redirect naar signup pagina
-    setTimeout(() => {
-        window.location.href = 'signup.html';
-    }, 300);
-});
+            e.preventDefault();
+            
+            // Pulse animatie
+            this.style.animation = 'pulse 0.6s ease';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 600);
+            
+            // Redirect naar signup pagina met correct pad
+            setTimeout(() => {
+                window.location.href = '../signup/signup.html';
+            }, 300);
+        });
     }
     
     // Hulp functies

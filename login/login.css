@@ -1,58 +1,12 @@
 /* Login pagina specifieke stijlen */
 .login-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: #2F3645;
     display: flex;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     position: relative;
     overflow: hidden;
-}
-
-/* Floating Background Elements */
-.floating-elements {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.floating-element {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    animation: float 6s ease-in-out infinite;
-}
-
-.floating-element.el-1 {
-    width: 100px;
-    height: 100px;
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-element.el-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 10%;
-    animation-delay: 2s;
-}
-
-.floating-element.el-3 {
-    width: 80px;
-    height: 80px;
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
 }
 
 .login-header {
@@ -220,48 +174,6 @@
     background: #f7fafc;
 }
 
-/* Modern Checkbox */
-.modern-checkbox {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 14px;
-    color: #4a5568;
-    gap: 10px;
-}
-
-.modern-checkbox input {
-    display: none;
-}
-
-.checkmark {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #cbd5e0;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    background: white;
-}
-
-.checkmark i {
-    font-size: 12px;
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.modern-checkbox input:checked + .checkmark {
-    background: #4a5568;
-    border-color: #4a5568;
-}
-
-.modern-checkbox input:checked + .checkmark i {
-    opacity: 1;
-}
-
 .form-options {
     display: flex;
     justify-content: space-between;
@@ -357,90 +269,6 @@
     transform: translateX(3px);
 }
 
-/* Glow Divider */
-.glow-divider {
-    display: flex;
-    align-items: center;
-    margin: 30px 0;
-    color: #a0aec0;
-    position: relative;
-}
-
-.glow-divider::before,
-.glow-divider::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
-}
-
-.glow-divider span {
-    padding: 0 20px;
-    font-size: 14px;
-    font-weight: 500;
-    background: white;
-}
-
-/* Google Auth Button */
-.google-auth-btn {
-    width: 100%;
-    padding: 16px;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
-    background: white;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-.google-auth-btn:hover {
-    border-color: #4a5568;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.google-icon-wrapper {
-    width: 24px;
-    height: 24px;
-    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.google-icon-wrapper i {
-    color: white;
-    font-size: 12px;
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
-}
-
-.google-btn-text {
-    color: #4a5568;
-}
-
-.google-btn-hover {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(74, 85, 104, 0.05), transparent);
-    transition: left 0.6s ease;
-}
-
-.google-auth-btn:hover .google-btn-hover {
-    left: 100%;
-}
-
 /* Signup Link with Pulse */
 .signup-link {
     text-align: center;
@@ -487,40 +315,6 @@
     color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.footer-links {
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-.footer-link {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.footer-link:hover {
-    color: white;
-    transform: translateY(-1px);
-}
-
-.footer-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: white;
-    transition: width 0.3s ease;
-}
-
-.footer-link:hover::after {
-    width: 100%;
 }
 
 /* Responsive Design */
