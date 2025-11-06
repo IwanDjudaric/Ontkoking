@@ -26,7 +26,19 @@ body {
     padding: 0;
 }
 
+.nav-item{
+    padding: 10px;
+    margin: 20px;
+    border: 1px #000;
+    box-shadow: 5px 5px gainsboro;
+}
+
+.nav-item:hover{
+    scale: 1.05;
+}
+
 .login-btn {
+    box-shadow: 5px 5px gainsboro;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -44,9 +56,12 @@ body {
 
 .login-btn:hover {
     background-color: #2d3748;
+    scale: 1.05;
+
 }
 
 .signin-btn {
+    box-shadow: 5px 5px gainsboro;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -64,6 +79,7 @@ body {
 
 .signin-btn:hover {
     background-color: #2d3748;
+    scale: 1.05;
 }
 
 .main-content {
