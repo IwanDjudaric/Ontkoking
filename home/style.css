@@ -17,6 +17,8 @@ body {
     width: 100vw;
 }
 
+
+
 .sidebar {
     width: 320px;
     background-color: #f0f0f0;
@@ -26,10 +28,15 @@ body {
     padding: 0;
 }
 
+.username{
+    border: solid 1px #ddd;
+    padding: 10px;
+    margin: 20px;
+}
+
 .nav-item{
     padding: 10px;
     margin: 20px;
-    border: 1px #000;
     box-shadow: 5px 5px gainsboro;
 }
 
