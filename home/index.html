@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KookGenZ | Stop de Ontkoking</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="code.js">
 </head>
 
 <body>
 
     <div class="app-container">
         <nav class="sidebar">
-            <div class="nav-item">
+            <div class="nav-item active">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </div>
@@ -35,17 +34,22 @@
                     <div class="video-content">
                     </div>
                 </div>
-        </main>
-        <nav class="comments-sidebar">
-            <div class="comments-header">
-                <input type="text">
-                <button>Send</button>
             </div>
-            <div class="comments-list">
-                <div class="comment">
+        </main>
+        
+        <nav class="comments-sidebar">
+            <div class="comments-list" id="commentsList">
+                <!-- Comments will be dynamically added here -->
+            </div>
+            <div class="comments-header">
+                <input type="text" id="commentInput" placeholder="Add a comment...">
+                <button id="sendButton">Send</button>
+            </div>
         </nav>
 
     </div>
+
+    <script src="code.js"></script>
 </body>
 
 </html>

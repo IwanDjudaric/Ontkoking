@@ -138,6 +138,93 @@ body {
     padding: 20px 30px;
     order: 1;
 }
+
+/* Comment item styles */
+.comment-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+}
+
+.comment-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-username {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #ff4444;
+    color: white;
+}
+
+.comment-text {
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+}
+
+.like-btn {
+    background: none;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.like-btn:hover {
+    background-color: #4a5568;
+    color: white;
+    border-color: #4a5568;
+}
+
 input[type="text"] {
     width: 80%;
     padding: 10px;
@@ -155,4 +242,8 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2d3748;
 }
