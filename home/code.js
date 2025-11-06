@@ -141,3 +141,66 @@ let commentSystem;
 document.addEventListener('DOMContentLoaded', () => {
     commentSystem = new CommentSystem();
 });
+
+
+
+// code.js
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('mainVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const progressBar = document.querySelector('.progress');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const progressContainer = document.querySelector('.progress-container');
+    
+    // Play/Pause functionaliteit
+    playPauseBtn.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            video.pause();
+            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    });
+    
+    // Update progress bar
+    video.addEventListener('timeupdate', function() {
+        const progress = (video.currentTime / video.duration) * 100;
+        progressBar.style.width = `${progress}%`;
+        
+        // Update tijd display
+        currentTimeEl.textContent = formatTime(video.currentTime);
+    });
+    
+    // Set video duration
+    video.addEventListener('loadedmetadata', function() {
+        durationEl.textContent = formatTime(video.duration);
+    });
+    
+    // Klik op progress bar om te seeken
+    progressContainer.addEventListener('click', function(e) {
+        const rect = progressContainer.getBoundingClientRect();
+        const pos = (e.clientX - rect.left) / rect.width;
+        video.currentTime = pos * video.duration;
+    });
+    
+    // Fullscreen functionaliteit
+    fullscreenBtn.addEventListener('click', function() {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+        }
+    });
+    
+    // Hulp functie om tijd te formatteren
+    function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+});
